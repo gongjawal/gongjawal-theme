@@ -1,3 +1,9 @@
+{{ if .Site.Params.math }}
+  {{ partial "../helpers/katex.html" . }}
+{{ end }}
+
+
+
 {{ if .Site.Params.custom_js }}
 {{ range .Site.Params.custom_js }}
   {{ $custom_template := resources.Get . }}
